@@ -7,12 +7,9 @@ class ClientsServices {
 
     async getHotelInfo() {
         const data = await fs.promises.readFile(pathHotel, 'utf8');
-        const hotelInfo = JSON.parse(data);
-        delete hotelInfo.rooms;
-    
-        return hotelInfo;
+        return JSON.parse(data);
     }
-
+    
     async getAllRooms() {
         const hotelInfo = await this.getHotelInfo();
         return hotelInfo.rooms;
