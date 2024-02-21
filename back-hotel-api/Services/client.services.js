@@ -1,4 +1,5 @@
 import fs from "fs";
+import { NotFoundError, AlreadyReservedError } from '../Errors/customErrors.js';
 
 const pathClients = "Json/clients.json";
 const pathHotel = "Json/hotel.json";
@@ -9,7 +10,7 @@ class ClientsServices {
         const data = await fs.promises.readFile(pathHotel, 'utf8');
         return JSON.parse(data);
     }
-    
+
     async getAllRooms() {
         const hotelInfo = await this.getHotelInfo();
         return hotelInfo.rooms;
@@ -19,7 +20,7 @@ class ClientsServices {
         const rooms = await this.getAllRooms();
         const room = rooms.find(room => room.id === roomId);
         if (!room) {
-            throw new Error(`No room found with id ${roomId}`);
+            throw new NotFoundError(`No room found with id ${roomId}`);
         }
         return room;
     }
@@ -34,20 +35,20 @@ class ClientsServices {
         const clients = await this.getClients();
         const client = clients.find(client => client.id === clientId);
         if (!client) {
-            throw new Error(`No client found with id ${clientId}`);
+            throw new NotFoundError(`No client found with id ${clientId}`);
         }
         return client;
     }
-    
+
     async reserveRoom(clientId, roomId) {
         const client = await this.getClientById(clientId); 
         const rooms = await this.getAllRooms();
         const room = rooms.find(room => room.id === roomId);
         if (!room) {
-            throw new Error(`No room found with id ${roomId}`);
+            throw new NotFoundError(`No room found with id ${roomId}`);
         }
         if (room.reserved) {
-            throw new Error(`Room ${roomId} is already reserved`);
+            throw new AlreadyReservedError(`Room ${roomId} is already reserved`);
         }
         room.reserved = true;
     }
@@ -70,17 +71,17 @@ class ClientsServices {
         const clients = await this.getClients();
         const client = clients.find(client => client.id === Number(clientId));
         if (!client) {
-            throw new Error(`Client with id ${clientId} not found`);
+            throw new NotFoundError(`Client with id ${clientId} not found`);
         }
     
         const rooms = await this.getAllRooms();
         const room = rooms.find(room => room.id === Number(roomId));
         if (!room) {
-            throw new Error(`Room with id ${roomId} not found`);
+            throw new NotFoundError(`Room with id ${roomId} not found`);
         }
     
         if (!this.isRoomBookedByClient(roomId, clientId)) {
-            throw new Error(`No booking found for client ${clientId} in room ${roomId}`);
+            throw new NotFoundError(`No booking found for client ${clientId} in room ${roomId}`);
         }
     
         this.doCancelBooking(roomId, clientId);

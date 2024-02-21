@@ -18,12 +18,8 @@
       font-size: 16px;
       transition: color 0.3s ease;
   
-      &:hover {
-        color: #500d11; // Blue
-      }
-      
-      &.active {
-        color: #500d11; // Blue
+      &:hover, &.active {
+        border-bottom: 2px solid white;
       }
     }
   }
