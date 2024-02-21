@@ -1,5 +1,5 @@
 {
-  "name": "Grand Hotel",
+  "name": "Le Grand Hotel",
   "location": {
     "address": "123 Main Street",
     "city": "Anytown",
@@ -24,7 +24,8 @@
       "name": "Standard Room",
       "description": "A comfortable room with one king size bed and a private bathroom.",
       "capacity": 2,
-      "price": 100
+      "price": 100,
+      "imageUrl": "https://www.hotel-lareserve.com/wp-content/uploads/2022/04/Hotel-La-Reserve-Saint-Jean-de-Luz-@Alexandre-Chapelier-Chambre-Standard-1280x850.jpg"
     },
     {
       "id": 2,
@@ -32,7 +33,8 @@
       "name": "Deluxe Room",
       "description": "A luxurious room with one king size bed, a private bathroom, and a balcony with ocean view.",
       "capacity": 2,
-      "price": 200
+      "price": 200,
+      "imageUrl": "https://www.peninsula.com/fr/-/media/pbk/rooms/deluxe-room-twin-bed.jpg?mw=905&hash=40D3C9ECA1353858F49CA56A9E808656"
     },
     {
       "id": 3,
@@ -40,7 +42,8 @@
       "name": "Suite",
       "description": "A spacious suite with one king size bed, a separate living room, a private bathroom, and a balcony with ocean view.",
       "capacity": 2,
-      "price": 300
+      "price": 300,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/2008-1227-EncoreLV-002-Pan.JPG"
     },
     {
       "id": 4,
@@ -48,7 +51,8 @@
       "name": "Family Room",
       "description": "A large room with two queen size beds, a private bathroom, and a balcony with garden view.",
       "capacity": 4,
-      "price": 250
+      "price": 250,
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/alexander-design-contemporary-family-room-1555952765.jpg"
     },
     {
       "id": 5,
@@ -56,7 +60,8 @@
       "name": "Penthouse Suite",
       "description": "A luxurious suite with one king size bed, a private bathroom, a kitchen, a dining area, a living room, and a balcony with ocean view.",
       "capacity": 2,
-      "price": 500
+      "price": 500,
+      "imageUrl": "https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2020/11/12/1044/Hotel-Martinez-P1304-Suite-Penthouse-Actress-Living-Room.jpg/Hotel-Martinez-P1304-Suite-Penthouse-Actress-Living-Room.16x9.jpg?imwidth=1280"
     },
     {
       "id": 6,
@@ -64,7 +69,8 @@
       "name": "Double Room",
       "description": "A comfortable room with two double beds and a private bathroom.",
       "capacity": 4,
-      "price": 150
+      "price": 150,
+      "imageUrl": "https://cdn.traveltripper.io/site-assets/512_863_12597/media/2018-02-22-041437/large_DDBDB.jpg"
     },
     {
       "id": 7,
@@ -72,7 +78,8 @@
       "name": "Studio",
       "description": "A cozy room with one queen size bed, a kitchenette, and a private bathroom.",
       "capacity": 2,
-      "price": 120
+      "price": 120,
+      "imageUrl": "https://static.cotemaison.fr/medias_11918/w_2000,h_1119,c_crop,x_0,y_137/w_640,h_360,c_fill,g_north/v1547047114/kitchenette-chambre-de-bonne-1_6102297.jpg"
     },
     {
       "id": 8,
@@ -80,7 +87,8 @@
       "name": "Executive Suite",
       "description": "A spacious suite with one king size bed, a private bathroom, a separate living room, a dining area, and a balcony with ocean view.",
       "capacity": 2,
-      "price": 400
+      "price": 400,
+      "imageUrl": "https://images.rosewoodhotels.com/is/image/rwhg/rwgzu-executive-suite-living-room-dusk"
     },
     {
       "id": 9,
@@ -88,7 +96,8 @@
       "name": "Junior Suite",
       "description": "A comfortable suite with one king size bed, a private bathroom, and a small sitting area.",
       "capacity": 2,
-      "price": 250
+      "price": 250,
+      "imageUrl": "https://grandpalaceriga.com/wp-content/uploads/2019/10/Junior-Suite-King_main.jpg"
     },
     {
       "id": 10,
@@ -96,7 +105,8 @@
       "name": "Presidential Suite",
       "description": "The most luxurious suite with one king size bed, a private bathroom, a large living room, a dining area, a kitchen, and a balcony with ocean view.",
       "capacity": 2,
-      "price": 1000
+      "price": 1000,
+      "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/160905121112-presidential-suites-st-regis-dubai-pool.jpg?q=w_2100,h_1400,x_0,y_0,c_fill"
     },
     {
       "id": 11,
@@ -104,7 +114,8 @@
       "name": "Twin Room",
       "description": "A comfortable room with two twin beds and a private bathroom.",
       "capacity": 2,
-      "price": 120
+      "price": 120,
+      "imageUrl": "https://1079465213.rsc.cdn77.org/media/2058/mercure-london-hyde-park-standard-twin-room-2.jpg?anchor=center&mode=crop&width=1170&height=780&rnd=133016646540000000"
     },
     {
       "id": 12,
@@ -112,7 +123,8 @@
       "name": "Standard Double Room",
       "description": "A comfortable room with one double bed and one twin bed, and a private bathroom.",
       "capacity": 3,
-      "price": 180
+      "price": 180,
+      "imageUrl": "https://www.hotelgoldencrown.com/files/hotel/hotel-a/Standard.jpg"
     }
   ]
 }
