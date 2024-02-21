@@ -7,14 +7,18 @@ const DetailsRooms = () => {
     const navigate = useNavigate();
     const {
         data: room,
-        isLoading, // boolean qui sera à true si l'appel est en cours
-        isSuccess, // boolean qui sera à true si l'appel à réussi
-        isError, // boolean qui sera à true si l'appel à échoué
-        error, // erreur renvoyé par l'api
+        isLoading,
+        isSuccess,
+        isError,
+        error,
     } = useGetDetailsRoomsQuery(id);
 
     const handleBack = () => {
         navigate('/');
+    }
+
+    const handleReserve = () => {
+        alert('Chambre réservée avec succès');
     }
 
     return (
@@ -27,6 +31,9 @@ const DetailsRooms = () => {
                         <p className="details-room__content__description">{room.description}</p>
                         <p className="details-room__content__capacity">Capacity: {room.capacity}</p>
                         <p className="details-room__content__price">Price: {room.price}</p>
+                        <button className="details-room__button details-room__button--reservation" onClick={handleReserve}>
+                            Réserver
+                        </button>
                         <button className="details-room__button" onClick={handleBack}>Retour</button>
                     </div>
                 </>
