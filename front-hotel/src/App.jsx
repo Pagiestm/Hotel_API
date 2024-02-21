@@ -1,13 +1,20 @@
-import { useState } from 'react'
-import './App.css'
 import './styles/index.scss';
 import Hotel from './components/Hotel'
+import DetailsRooms from './components/DetailsRooms'
+import Footer from './components/Footer'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
-      <Hotel />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Hotel />} />
+          <Route path="/room/:id" element={<DetailsRooms />} />
+        </Routes>
+      </Router>
+      <Footer />
     </>
   )
 }

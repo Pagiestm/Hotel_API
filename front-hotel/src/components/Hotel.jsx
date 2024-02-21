@@ -1,4 +1,5 @@
 import { useGetHotelInfoQuery } from "../slices/apiSlice";
+import { Link } from 'react-router-dom';
 
 const Hotel = () => {
 
@@ -16,15 +17,6 @@ const Hotel = () => {
                 {isSuccess === true && todos &&
                     <div>
                         <h1>{todos.name}</h1>
-                        <p>{todos.location.address}, {todos.location.city}, {todos.location.state}, {todos.location.zip}, {todos.location.country}</p>
-                        <p>Phone: {todos.contact.phone}</p>
-                        <p>Email: {todos.contact.email}</p>
-                        <div className="hotel__facilities">
-                            <h3>Facilities</h3>
-                            <ul>
-                                {todos.facilities.map((facility, index) => <li key={index}>{facility}</li>)}
-                            </ul>
-                        </div>
                         <div className="hotel__rooms">
                             <h3>Rooms</h3>
                             <ul>
@@ -32,9 +24,7 @@ const Hotel = () => {
                                     <li key={room.id}>
                                         <h4>{room.name}</h4>
                                         <img src={room.imageUrl} alt={room.name} />
-                                        <p>{room.description}</p>
-                                        <p>Capacity: {room.capacity}</p>
-                                        <p>Price: {room.price}</p>
+                                        <Link to={`/room/${room.id}`}>En savoir plus</Link>
                                     </li>
                                 )}
                             </ul>

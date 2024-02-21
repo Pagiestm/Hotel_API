@@ -7,7 +7,10 @@ export const api = createApi({
         getHotelInfo: builder.query({
             query: () => '/hotelInfo',
         }),
+        getDetailsRooms: builder.query({
+            query: (id) => `/rooms/${id}`,
+        }),
     })
 })
 
-export const { useGetHotelInfoQuery } = api;
+export const { useGetHotelInfoQuery, useGetDetailsRoomsQuery } = api;
