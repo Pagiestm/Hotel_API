@@ -18,17 +18,19 @@ const DetailsRooms = () => {
     }
 
     return (
-        <div>
+        <div className="details-room">
             {isSuccess === true && room &&
                 <>
-                    <h1>{room.name}</h1>
-                    <img src={room.imageUrl} alt={room.name} />
-                    <p>{room.description}</p>
-                    <p>Capacity: {room.capacity}</p>
-                    <p>Price: {room.price}</p>
+                    <img className="details-room__image" src={room.imageUrl} alt={room.name} />
+                    <div className="details-room__content">
+                        <h1 className="details-room__content__title">{room.name}</h1>
+                        <p className="details-room__content__description">{room.description}</p>
+                        <p className="details-room__content__capacity">Capacity: {room.capacity}</p>
+                        <p className="details-room__content__price">Price: {room.price}</p>
+                        <button className="details-room__button" onClick={handleBack}>Retour</button>
+                    </div>
                 </>
             }
-            <button onClick={handleBack}>Retour</button>
         </div>
     );
 }

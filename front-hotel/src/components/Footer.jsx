@@ -11,7 +11,7 @@ const Footer = () => {
     } = useGetHotelInfoQuery()
 
     return (
-        <footer>
+        <footer className="footer"> {/* Ajoutez la classe "footer" ici */}
             {isSuccess === true && hotelInfo &&
                 <>
                     <div className="footer__info">
